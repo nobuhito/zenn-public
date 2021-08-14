@@ -210,8 +210,6 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 
 変更した Dockerfile をリビルドすると `textlint` コマンドが使えるようになってるはずなので、 `textlint --init` を実行して.textlintrc を作する。
 
-内容的には以下の感じにするといい感じ。ここらへんは各人で最適な設定が違うと思われるので、いろいろ試してみてほしい。
-
 ```json
 {
   "filters": {},
@@ -228,6 +226,16 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
   }
 }
 ```
+
+:::message
+上記は１つの例としてだが、個人的には以下の [現時点の設定](https://github.com/nobuhito/dev-container-of-zenn/blob/main/.textlintrc) のような設定が良い感じ。
+ここらへんは各人で最適な設定が違うと思われるので、いろいろ試してみると良い。
+**現時点の設定** → https://github.com/nobuhito/dev-container-of-zenn/blob/main/.textlintrc
+
+:::
+
+
+
 
 ### `devcontainer.json`
 
